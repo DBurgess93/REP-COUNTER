@@ -10,31 +10,10 @@ puts "Destroying exercises"
 Exercise.destroy_all
 
 puts "Creating new exercises"
-ex1 = Exercise.new(
-  name: "Push-ups",
-  goal: 50,
-  total: 0,
-  status: false
-)
-ex1.save
-puts "Created #{ex1.name}"
+Exercise.create(name: "Push-ups", total: 0, goal: 50, status: false)
 
-ex2 = Exercise.new(
-  name: "Chin-ups",
-  goal: 12,
-  total: 0,
-  status: false
-)
-ex2.save
-puts "Created #{ex2.name}"
+Exercise.create(name: "Chin-ups", total: 0, goal: 12, status: false)
 
-ex3 = Exercise.new(
-  name: "Crunches",
-  goal: 100,
-  total: 0,
-  status: false
-)
-ex3.save
-puts "Created #{ex3.name}"
+Exercise.create(name: "Crunches", total: 0, goal: 100, status: false)
 
 puts "All done!"
